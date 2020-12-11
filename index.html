@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Snap Shot</title>
+    
+    <link rel="icon" href="camera.png">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+
+<style>
+    .container-fluid{
+        text-align: center;
+    }
+    .img{
+        border: 1px solid rgb(107, 167, 245);
+        border-radius: 10px;
+        padding: 10px;
+        height:500px;
+         
+    }
+    .arrow{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 190px;
+        margin-top: 100px;
+    }
+    .btn-success{
+        margin-top:10px;
+    }
+    .btn-info{
+        margin-top:10px;
+    }
+    body{
+        background-image: url('white-2484120_1280.png');
+    }
+  
+</style>
+<body>
+                  
+    <div class="container-fluid">
+        <h1>Take A nice Snap Shot And Save It In Your Computer</h1>
+    </div>
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 img">
+            <video id="video" width="100%" height="500px" autoplay></video>
+            <button class="btn btn-primary" onclick="snapshot()" id="snap">Snap Photo</button>
+        </div>
+        <div class="col-md-3 arrow">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+        </div>
+        <div class="col-md-5 img">
+            <canvas id="canvas" width="640" height="480"></canvas>
+            <button  onclick="savebtn()" id="savebtn" class="btn btn-success">Save it</button>
+            <button onclick="resetbtn()" id="resetbtn" class="btn btn-info">Reset</button>
+        </div>
+    </div>
+</div>
+
+
+                
+                
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <script src="snapshot.js"></script>
+ <script src="FileSaver.js/src/FileSaver.js"></script>
+
+</body>
+</html>
